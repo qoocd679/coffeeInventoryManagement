@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本日熱銷</title>
+    <script src="./char.js"></script>
+    <style>
+        /* The navigation menu */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The subnavigation menu */
+  .subnav {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Subnav button */
+  .subnav .subnavbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /* Add a red background color to navigation links on hover */
+  .navbar a:hover,  .subnavbtn {
+    background-color: red;
+  }
+  
+  .subnav:hover{
+    background-color: skyblue;
+  }
+  /* Style the subnav content - positioned absolute */
+  .subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: red;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  /* Style the subnav links */
+  .subnav-content a {
+    float: left;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Add a grey background color on hover */
+  .subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+    
+  }
+  
+  /* When you move the mouse over the subnav container, open the subnav content */
+  .subnav:hover .subnav-content {
+    display: block;
+  }
+  body{
+    background-image: url("./ddd.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+
+  }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="./Home.html">首頁</a>
+        <div class="subnav">
+          <button class="subnavbtn">進貨管理 <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="./GoodNumbers.html">庫存管理</a>
+            <a href="./BuyGoods.html">下單系統</a>
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">銷貨管理 <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="./MakeMoney.html">當日營業額</a>
+            <a href="./Top10.html">本日熱銷</a>
+           
+            
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">服務廠商 <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="./Producer.html">聯絡資訊</a>
+        
+          </div>
+        </div>
+      </div>
+
+        <br><br><br><br>
+
+        <canvas  id="myChart" style="width:500px;max-width:1500px;margin-left: 11%;" ></canvas>
+
+
+
+
+
+
+
+
+        <script>
+  
+var apple=localStorage.getItem("cat");
+var cc=JSON.parse(apple);
+console.log(cc);
+var bb= cc.length;
+console.log(bb);
+// +cc[((bb%22)+22)]
+var egg_0 =0;
+  var egg_1 =0;
+  var egg_2 =0;
+  var egg_3 =0;
+  var egg_4 =0;
+  var egg_5 =0;
+  var egg_6 =0;
+  var egg_7 =0;
+  var egg_8 =0;
+  var egg_9 =0;
+  var egg_10 =0;
+  var egg_11 =0;
+  var egg_12 =0;
+  var egg_13 =0;
+  var egg_14 =0;
+  var egg_15 =0;
+  var egg_16 =0;
+  var egg_17=0;
+  var egg_18 =0;
+  var egg_19=0;
+  var egg_20 =0;
+  var egg_21 =0;
+for( var i=0; i<cc.length/22;i++){
+egg_0 +=parseInt( cc[(bb%22)+(i*22)].apple);
+egg_1 +=parseInt( cc[((bb%22)+1)+(i*22)].banana);
+egg_2 +=parseInt( cc[((bb%22)+2)+(i*22)].cat);
+egg_3 +=parseInt( cc[((bb%22)+3)+(i*22)].dog);
+egg_4 +=parseInt( cc[((bb%22)+4)+(i*22)].ear);
+egg_5 +=parseInt( cc[((bb%22)+5)+(i*22)].fog);
+egg_6 +=parseInt( cc[((bb%22)+6)+(i*22)].girl);
+egg_7 +=parseInt( cc[((bb%22)+7)+(i*22)].happy);
+egg_8 +=parseInt( cc[((bb%22)+8)+(i*22)].ice);
+egg_9 +=parseInt( cc[((bb%22)+9)+(i*22)].joy);
+egg_10 +=parseInt( cc[((bb%22)+10)+(i*22)].kitty);
+egg_11 +=parseInt( cc[((bb%22)+11)+(i*22)].long);
+egg_12 +=parseInt( cc[((bb%22)+12)+(i*22)].man);
+egg_13 +=parseInt( cc[((bb%22)+13)+(i*22)].nose);
+egg_14 +=parseInt( cc[((bb%22)+14)+(i*22)].ox);
+egg_15 +=parseInt( cc[((bb%22)+15)+(i*22)].people);
+egg_16 +=parseInt( cc[((bb%22)+16)+(i*22)].queen);
+egg_17 +=parseInt( cc[((bb%22)+17)+(i*22)].rose);
+egg_18 +=parseInt( cc[((bb%22)+18)+(i*22)].sexy);
+egg_19 +=parseInt( cc[((bb%22)+19)+(i*22)].tv);
+egg_20 +=parseInt( cc[((bb%22)+20)+(i*22)].unber);
+egg_21 +=parseInt( cc[((bb%22)+21)+(i*22)].victory);
+}
+  
+     var xValues = ["美式咖啡", "特調咖啡", "拿鐵咖啡", "卡布奇諾","可可亞","西西里咖啡","燕麥奶咖啡","精品曼巴","精品Kona","精品西達摩","精品阿拉比卡"
+ ];
+     var yValues = [parseInt(egg_0+egg_1) , parseInt(egg_2+egg_3), parseInt(egg_4+egg_5), parseInt(egg_6+egg_7)
+     , parseInt(egg_8+egg_9),parseInt(egg_10+egg_11),parseInt(egg_12+egg_13),parseInt(egg_14+egg_15),parseInt(egg_16+egg_17)
+    ,parseInt(egg_18+egg_19),parseInt(egg_20+egg_21)];
+     var barColors = [
+          "#b91d47",
+          "#B27400",
+          "#2b5797",
+          "#5B009E",
+          "#00B200",
+          "#FFCC6E",
+          "#30FFFF",
+          "#BD63FF",
+          "#FFB5B5",
+          "#C9FFFF",
+          "#FFFF3B"
+
+        ];
+        console.log(parseInt(egg_0+egg_1));
+        new Chart("myChart", {
+          type: "doughnut",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+         
+
+          options: {
+            title: {
+              display: true,
+              text: "本日熱銷"
+              
+            }
+            
+          }
+        });
+        </script>
+
+</body>
+</html>

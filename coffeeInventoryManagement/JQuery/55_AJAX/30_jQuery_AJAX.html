@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+
+<body>
+
+    <h4>jQuery.ajax()</h4>
+    <p><a href='https://api.jquery.com/jQuery.ajax/'>https://api.jquery.com/jQuery.ajax/</a></p>
+    <h4>jQuery ajax() Method</h4>
+    <p><a href='https://www.w3schools.com/jquery/ajax_ajax.asp'>https://www.w3schools.com/jquery/ajax_ajax.asp</a></p>
+    <h4>資料來源</h4>
+    <p><a href='https://reqres.in/'>https://reqres.in/</a></p>
+
+    <hr>
+
+    <button id="btnAjax">$.ajax()</button>
+    <hr>
+    <div>
+        姓名：<span id="userName"></span> <br>
+        信箱：<input id="userEmail" type="email"> <br>
+        大頭照：<img id="userHead"><br>
+    </div>
+
+    <script>
+        // 10. 按鈕點選後，讀取+顯示資料
+        btnAjax.onclick = function () {
+
+            // 20. 觀察網頁顯示的資料結構 https://reqres.in/api/users/2
+            $.ajax({
+                url: 'https://reqres.in/api/users?page=2',
+                dataType: 'json',
+                success: function (data) {
+                    // 30. 取得資料並顯示到畫面上
+         console.log(data);
+                    $('#userName').text(data.data.first_name);
+                    $('#userEmail').val(data.data.email);
+                    $('#userHead').prop('src', data.data.avatar);
+
+
+
+
+                }
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>

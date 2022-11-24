@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+
+<STYle>
+    
+    button:hover {
+            opacity: 0.8;
+        }
+ body {
+            background-image: url('./bk1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+h1 {
+            color: antiquewhite;
+            font-size: 37px;
+            text-align: center;
+        }
+        img {
+            width: 30%;
+            border-radius: 50%;
+           position: relative;
+           left: 650px
+         ;}
+         
+       .box{
+      
+         padding: 16px;
+            margin: auto;
+            position: relative;
+            font-size: 38px;
+            left: 30%;}
+            .xbox { 
+                 color: red;
+                 background-color: #04AA6D;
+            padding: 16px;
+            margin: auto;
+            position: relative;
+            left: 43%;
+            font-size: 25px;
+            width: 150px;
+            height: 75px;
+            cursor: pointer;
+            border-radius: 50px;
+            box-shadow: 0 15px rgb(1, 29, 1);
+           font-family:Comic Sans MS, Comic Sans, cursive;
+        }
+#uname{ 
+    color: gray;
+width: 320px;
+height: 45px;
+}
+#psw{  color: gray;
+    width: 320px;
+height: 45px;
+}
+.xbox:active {
+  background-color: pink;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);}
+</STYle>
+
+
+</head>
+
+<body>
+  
+    <h1>咖啡店進貨系統</h1>
+
+  <img src="./sign in.jpg">
+
+<div class="box"> 
+  <label for="uname"><b>使用者帳號</b></label>
+  <input name="uname" type="text" id="uname" placeholder="輸入帳號" required>
+  <br>
+  <label for="psw"><b>使用者密碼</b></label>
+  <input type="password" placeholder="輸入密碼 " name="psw" id="psw" required >
+</div>
+<button onclick="sign()" class="xbox"  >  sign in  </button>
+
+<script>
+
+
+
+function sign(){
+    if(uname.value=="abcdef" ){
+
+if(psw.value=="123456"){
+    window.location.assign("http://127.0.0.1:5500/home.html");
+}
+
+
+
+
+    }else {alert(`帳號或密碼錯誤${uname.value=''}${psw.value=''}`)  }}
+
+
+</script>
+
+
+
+</body>
+
+</html>

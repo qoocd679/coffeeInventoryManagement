@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>營業額</title>
+    <link rel="stylesheet" href="./backGround.css">
+    <style>
+        table,
+        td,
+        th {
+            background-color: #FFF5EE;
+            border: 1.5px solid salmon;
+            table-layout: fixed;
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            height: 50px;
+        }
+
+        th {
+            color: rgb(35, 93, 216);
+            font-size: 40px;
+        }
+
+        .money {
+            text-align: center
+        }
+
+        .moneybox {
+            text-align: right;
+        }
+        input{
+      height: 25px;
+      width: 40px;
+     }
+     td{
+      font-size: 25px;
+     }
+     table{
+    cursor:pointer;
+     }
+/* #demo::before{
+    content:yy+"年"+mm+"月"+dd+"日"
+} */
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="./Home.html">首頁</a>
+        <div class="subnav">
+            <button class="subnavbtn">進貨管理 <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="./GoodNumbers.html">庫存管理</a>
+                <a href="./BuyGoods.html">下單系統</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">銷貨管理 <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="./MakeMoney.html">當日營業額</a>
+                <a href="./Top10.html">本日熱銷</a>
+              
+
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">服務廠商 <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="./Producer.html">聯絡資訊</a>
+
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <table>
+        <tr>
+            <th>品名</th>
+            <th>價錢</th>
+            <th>數量</th>
+        </tr>
+        <tr>
+            <td>美式咖啡</td>
+            <td class="money">50/70</td>
+            <td class="moneybox"><input type="number" min="0" max="200" id="A">杯
+                <input type="number" min="0" max="200"  id="B">杯
+
+            </td>
+        </tr>
+        <tr>
+            <td>特調咖啡</td>
+            <td class="money">55/75</td>
+            <td class="moneybox"><input type="number" min="0" max="100"  id="C1">杯
+                <input type="number" min="0" max="200"  id="D">杯
+            </td>
+        </tr>
+        <tr>
+            <td>拿鐵咖啡</td>
+            <td class="money">60/80</td>
+            <td class="moneybox"> <input type="number" min="0" max="200"  id="E">杯
+                <input type="number" min="0" max="200"  id="F">杯
+            </td>
+        </tr>
+        <tr>
+            <td>卡布奇諾</td>
+            <td class="money">60/80</td>
+            <td class="moneybox"><input type="number" min="0" max="200"  id="G">杯
+                <input type="number" min="0" max="200"  id="H">杯
+            </td>
+        </tr>
+        <tr>
+            <td>可可亞</td>
+            <td class="money">60/80</td>
+            <td class="moneybox"><input type="number" min="0" max="200"  id="I">杯
+                <input type="number" min="0" max="200"  id="J">杯
+            </td>
+        </tr>
+
+        <tr>
+            <td>西西里咖啡</td>
+            <td class="money">65/85</td>
+            <td class="moneybox"><input type="number" min="0" max="200"  id="K">杯
+                <input type="number" min="0" max="200"  id="L">杯
+            </td>
+        </tr>
+        <tr>
+            <td>燕麥奶咖啡</td>
+            <td class="money">65/85</td>
+            <td class="moneybox"> <input type="number" min="0" max="200"  id="M">杯
+                <input type="number" min="0" max="200"  id="N">杯
+            </td>
+        </tr>
+        <tr>
+            <td>精品曼巴</td>
+            <td class="money">80/100</td>
+            <td class="moneybox"><input type="number" min="0" max="200"  id="O">杯
+                <input type="number" min="0" max="200" id="P">杯
+            </td>
+        </tr>
+        <tr>
+            <td>精品Kona</td>
+            <td class="money">80/100</td>
+            <td class="moneybox"><input type="number" min="0" max="200" id="Q">杯
+                <input type="number" min="0" max="200"  id="R">杯
+            </td>
+        </tr>
+        <tr>
+            <td>精品西達摩</td>
+            <td class="money">90/110</td>
+            <td class="moneybox">
+                <input type="number" min="0" max="200"  id="S">杯
+                <input type="number" min="0" max="200"  id="T">杯
+            </td>
+        </tr>
+        <tr>
+            <td>精品阿拉比卡</td>
+            <td class="money">100/120</td>
+            <td class="moneybox">
+                <input type="number" min="0" max="200"  id="U">杯
+                <input type="number" min="0" max="200"  id="V">杯
+            </td>
+        </tr>
+        <tr>
+            <td>總計:</td>
+            <td colspan="2" class="moneybox">
+
+                <h2 id="demo"></h2> 元
+
+            </td>
+        </tr>
+
+    </table>
+
+    <script> 
+  var egg_0 =0;
+  var egg_1 =0;
+  var egg_2 =0;
+  var egg_3 =0;
+  var egg_4 =0;
+  var egg_5 =0;
+  var egg_6 =0;
+  var egg_7 =0;
+  var egg_8 =0;
+  var egg_9 =0;
+  var egg_10 =0;
+  var egg_11 =0;
+  var egg_12 =0;
+  var egg_13 =0;
+  var egg_14 =0;
+  var egg_15 =0;
+  var egg_16 =0;
+  var egg_17=0;
+  var egg_18 =0;
+  var egg_19=0;
+  var egg_20 =0;
+  var egg_21 =0;
+var apple=localStorage.getItem("cat");
+
+var cc=JSON.parse(apple);
+console.log(cc);
+var bb= cc.length;
+console.log(bb);
+// +cc[((bb%22)+22)]
+
+for( var i=0; i<cc.length/22;i++){
+egg_0 +=parseInt( cc[(bb%22)+(i*22)].apple);
+egg_1 +=parseInt( cc[((bb%22)+1)+(i*22)].banana);
+egg_2 +=parseInt( cc[((bb%22)+2)+(i*22)].cat);
+egg_3 +=parseInt( cc[((bb%22)+3)+(i*22)].dog);
+egg_4 +=parseInt( cc[((bb%22)+4)+(i*22)].ear);
+egg_5 +=parseInt( cc[((bb%22)+5)+(i*22)].fog);
+egg_6 +=parseInt( cc[((bb%22)+6)+(i*22)].girl);
+egg_7 +=parseInt( cc[((bb%22)+7)+(i*22)].happy);
+egg_8 +=parseInt( cc[((bb%22)+8)+(i*22)].ice);
+egg_9 +=parseInt( cc[((bb%22)+9)+(i*22)].joy);
+egg_10 +=parseInt( cc[((bb%22)+10)+(i*22)].kitty);
+egg_11 +=parseInt( cc[((bb%22)+11)+(i*22)].long);
+egg_12 +=parseInt( cc[((bb%22)+12)+(i*22)].man);
+egg_13 +=parseInt( cc[((bb%22)+13)+(i*22)].nose);
+egg_14 +=parseInt( cc[((bb%22)+14)+(i*22)].ox);
+egg_15 +=parseInt( cc[((bb%22)+15)+(i*22)].people);
+egg_16 +=parseInt( cc[((bb%22)+16)+(i*22)].queen);
+egg_17 +=parseInt( cc[((bb%22)+17)+(i*22)].rose);
+egg_18 +=parseInt( cc[((bb%22)+18)+(i*22)].sexy);
+egg_19 +=parseInt( cc[((bb%22)+19)+(i*22)].tv);
+egg_20 +=parseInt( cc[((bb%22)+20)+(i*22)].unber);
+egg_21 +=parseInt( cc[((bb%22)+21)+(i*22)].victory);
+}
+;
+A.value=egg_0;
+B.value=egg_1;
+C1.value=egg_2;
+D.value=egg_3;
+E.value=egg_4;
+F.value=egg_5;
+G.value=egg_6;
+H.value=egg_7;
+I.value=egg_8;
+J.value=egg_9;
+K.value=egg_10;
+L.value=egg_11;
+M.value=egg_12;
+N.value=egg_13;
+O.value=egg_14;
+P.value=egg_15;
+Q.value=egg_16;
+R.value=egg_17;
+S.value=egg_18;
+T.value=egg_19;
+U.value=egg_20;
+V.value=egg_21;
+var coin_0=parseInt(egg_0*50);
+var coin_1=parseInt(egg_1*70);
+var coin_2=parseInt(egg_2*55);
+var coin_3=parseInt(egg_3*75);
+var coin_4=parseInt(egg_4*60);
+var coin_5=parseInt(egg_5*80);
+var coin_6=parseInt(egg_6*60);
+var coin_7=parseInt(egg_7*80);
+var coin_8=parseInt(egg_8*60);
+var coin_9=parseInt(egg_9*80);
+var coin_10=parseInt(egg_10*65);
+var coin_11=parseInt(egg_11*85);
+var coin_12=parseInt(egg_12*65);
+var coin_13=parseInt(egg_13*85);
+var coin_14=parseInt(egg_14*80);
+var coin_15=parseInt(egg_15*100);
+var coin_16=parseInt(egg_16*80);
+var coin_17=parseInt(egg_17*100);
+var coin_18=parseInt(egg_18*90);
+var coin_19=parseInt(egg_19*110);
+var coin_20=parseInt(egg_20*100);
+var coin_21=parseInt(egg_21*120);
+// demo.innerText="今日營業額"+parseInt(coin_0+coin_1+coin_2+coin_3+coin_4+coin_5+coin_6+coin_7+coin_8+coin_9
+// +coin_10+coin_11+coin_12+coin_13+coin_14+coin_15+coin_16+coin_17+coin_18+coin_19+coin_20+coin_21);
+   
+   
+const date = new Date();
+yy= date.getFullYear();
+mm= date.getMonth()+1;
+dd= date.getDate();
+document.getElementById('demo').innerHTML= yy+"年"+mm+"月"+dd+"日"+"營業額"+parseInt(coin_0+coin_1+coin_2+coin_3+coin_4+coin_5+coin_6+coin_7+coin_8+coin_9
++coin_10+coin_11+coin_12+coin_13+coin_14+coin_15+coin_16+coin_17+coin_18+coin_19+coin_20+coin_21);
+   </script>
+
+</body>
+
+</html>

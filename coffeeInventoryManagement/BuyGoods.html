@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下單系統</title>
+  <link rel="stylesheet" href="./backGround.css">
+  <link rel="stylesheet" href="./table.css">
+  <style>
+    input {
+      block-size: 70px;
+      font-size: 30px;
+    }
+
+    button {
+      font-size: 30px;
+      margin-left: 520px;
+    }
+    table{
+    cursor:pointer;
+     }
+  </style>
+
+<body>
+  <div class="navbar">
+    <a href="./Home.html">首頁</a>
+    <div class="subnav">
+      <button class="subnavbtn">進貨管理 <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="./GoodNumbers.html">庫存管理</a>
+        <a href="./BuyGoods.html">下單系統</a>
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">銷貨管理 <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="./MakeMoney.html">當日營業額</a>
+       
+
+      </div>
+    </div>
+    <div class="subnav">
+      <button class="subnavbtn">服務廠商 <i class="fa fa-caret-down"></i></button>
+      <div class="subnav-content">
+        <a href="./Producer.html">聯絡資訊</a>
+
+      </div>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+ 
+
+
+  <table>
+    <form>
+      <tr>
+        <th colspan="3">咖啡豆</th>
+      </tr>
+      <tr>
+        <td colspan="2">南非咖啡豆</td>
+        <td class="box">
+          <span>下單數量:</span>
+          <input type="number" min="0" max="50" class="bean1">包
+        </td>
+
+      </tr>
+      <tr>
+        <td colspan="2">阿拉比卡豆
+        </td>
+        <td class="box"><span>下單數量:</span>
+          <input type="number" min="0" max="50" class="bean2">包
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">巴西咖啡豆</td>
+        <td class="box"><span>下單數量:</span>
+          <input type="number" min="0" max="50" class="bean3">包
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">衣索比亞豆 </td>
+        <td class="box"><span>下單數量:</span>
+          <input type="number" min="0" max="50" class="bean4">包
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">夏威夷豆</td>
+        <td class="box"><span>下單數量:</span>
+          <input type="number" min="0" max="50" class="bean5">包
+        </td>
+      </tr>
+      <tr>
+        <th colspan="3">配料</th>
+      </tr>
+      <tr7>
+        <td colspan="2">牛奶</td>
+        <td class="box"><span>下單數量:</span>
+          <input type="number" min="0" max="50" class="spice1">瓶
+        </td>
+        </tr>
+        <tr>
+          <td colspan="2">檸檬汁</td>
+          <td class="box"><span>下單數量:</span>
+            <input type="number" min="0" max="50" class="spice2">瓶
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">奶精球 </td>
+          <td class="box"><span>下單數量:</span>
+            <input type="number" min="0" max="50" class="spice3">袋
+          </td>
+        </tr>
+        
+  
+        <tr>
+          <td colspan="2">可可粉</td>
+          <td class="box"><span>下單數量:</span>
+            <input type="number" min="0" max="50" class="spice6">包
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">燕麥奶</td>
+          <td class="box"><span>下單數量:</span>
+            <input type="number" min="0" max="50" class="spice7">瓶
+          </td>
+        </tr>
+        <tr>
+          <th colspan="3">用品</th>
+        </tr>
+        <tr>
+          <td colspan="2">小紙杯</td>
+          <td class="box"><span>下單數量:</span>
+            <input type="number" min="0" max="50" class="tool1">袋
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">大紙杯</td>
+          <td class="box"><span>下單數量:</span>
+            <input type="number" min="0" max="50" class="tool2">袋
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">小杯蓋</td>
+          <td class="box"><span>下單數量:</span>
+            <input type="number" min="0" max="50" class="tool3">袋
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">大杯蓋</td>
+          <td class="box"><span>下單數量:</span>
+            <input type="number" min="0" max="50" class="tool4">袋
+          </td>
+        </tr>
+      
+        <tr>
+          <td colspan="3"> <button onclick="box()"> 確認下單
+            </button></td>
+
+        </tr>
+    </form>
+  </table>
+  <h2 id="demo"></h2>
+
+  <script>
+
+    function box() {
+      const a = document.getElementsByClassName("bean1")[0].value;
+      const b = document.getElementsByClassName("bean2")[0].value;
+      const c = document.getElementsByClassName("bean3")[0].value;
+      const d = document.getElementsByClassName("bean4")[0].value;
+      const e = document.getElementsByClassName("bean5")[0].value;
+      const f = document.getElementsByClassName("spice1")[0].value;
+      const g = document.getElementsByClassName("spice2")[0].value;
+      const h = document.getElementsByClassName("spice3")[0].value;
+      
+      
+      const k = document.getElementsByClassName("spice6")[0].value;
+      const l = document.getElementsByClassName("spice7")[0].value;
+      const m = document.getElementsByClassName("tool1")[0].value;
+      const n = document.getElementsByClassName("tool2")[0].value;
+      const o = document.getElementsByClassName("tool3")[0].value;
+      const p = document.getElementsByClassName("tool4")[0].value;
+
+  
+    //  if(a<=0){
+    // document.getElementsByClassName("bean1").attr("value");
+    // }
+
+      console.log(a);
+
+     
+
+      const total = (`\n南非咖啡豆:${a}\n阿拉比卡豆:${b}\n巴西咖啡豆:${c}\n衣索比亞豆:${d}\n夏威夷豆:${e}
+      \n牛奶:${f}\n檸檬汁:${g}\n奶精球:${h}\n可可粉:${k}\n燕麥奶:${l}
+      \n小紙杯:${m}\n大紙杯:${n}\n小杯蓋:${o}\n大杯蓋:${p}`)
+
+      confirm(`確認下單資訊:${total}`);
+
+
+    }
+
+    
+
+
+
+   
+
+
+
+  </script>
+
+</body>
+
+</html>

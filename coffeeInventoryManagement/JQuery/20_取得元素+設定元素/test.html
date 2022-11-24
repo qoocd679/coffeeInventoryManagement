@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../_js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <h3>模仿 $().text() </h3>
+    <hr>
+    <p id="apple">胖丁</p>
+    <button id="btnLogin">測試中</button>
+    <hr>
+    <p id="result"></p>
+
+    <script>
+        function cat(data) {
+            if (data == undefined) {
+                return apple.innerText;
+            } else {
+                apple.innerText = data;
+            }
+
+            // // js - 設值
+            // apple.innerText = data;
+            // // jq - 設值
+            // $('#apple').text(data);
+
+            // // js - 取值
+            // return apple.innerText;
+            // // jq - 取值
+            // return $("#apple").text();
+        }
+        btnLogin.onclick = function () {
+            // // 沒有給資料的時候，有抓到胖丁
+            var temp = cat("皮卡");
+            // result.innerText = temp;
+
+            // ok
+            // cat("皮卡丘");
+
+            // text()         => 依照選到的元素
+            // text("皮卡丘")  => 覆蓋|更新內容
+        }
+    </script>
+
+</body>
+</html>

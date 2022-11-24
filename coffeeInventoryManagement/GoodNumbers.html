@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>庫存管理</title>
+  <link rel="stylesheet" href="./backGround.css">
+  <link rel="stylesheet" href="./table.css">
+  <style>
+    th{
+      font-size: 40px;
+      font-style:italic;
+    }
+    input{
+font-size: 25px;
+width: 40px;
+    }
+    /* #coffeBean_1{
+     color: brown; 
+    } */
+    table{
+    cursor:pointer;
+     }
+  </style>
+</head>
+
+<body>
+
+
+    <div class="navbar">
+      <a href="./Home.html">首頁</a>
+      <div class="subnav">
+        <button class="subnavbtn">進貨管理 <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="./GoodNumbers.html">庫存管理</a>
+          <a href="./BuyGoods.html">下單系統</a>
+        </div>
+      </div>
+      <div class="subnav">
+        <button class="subnavbtn">銷貨管理 <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="./MakeMoney.html">當日營業額</a>
+          <a href="./Top10.html">本日熱銷</a>
+        
+
+        </div>
+      </div>
+      <div class="subnav">
+        <button class="subnavbtn">服務廠商 <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="./Producer.html">聯絡資訊</a>
+
+        </div>
+      </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <table> 
+<!-- 設計表格 -->
+      <tr>
+        <th colspan="3">咖啡豆</th>
+      </tr>
+      <tr>
+        <td colspan="2">南非咖啡豆</td>
+        <td class="box"><input type="text"value="20" id="coffeBean_1" >包</td>
+      </tr>
+      <tr>
+        <td colspan="2">阿拉比卡豆
+        </td>
+        <td class="box"><input type="text" value="20" id="coffeBean_2">包</td>
+      </tr>
+      <tr>
+        <td colspan="2">巴西咖啡豆</td>
+        <td class="box"><input type="text"value="20" id="coffeBean_3">包</td>
+      </tr>
+      <tr>
+        <td colspan="2">衣索比亞豆 </td>
+        <td class="box"><input type="text"value="20" id="coffeBean_4">包</td>
+      </tr>
+      <tr>
+        <td colspan="2">夏威夷豆</td>
+        <td class="box"><input type="text"value="20" id="coffeBean_5" >包</td>
+      </tr>
+      <tr>
+        <th colspan="3">配料</th>
+      </tr>
+      <tr7>
+        <td colspan="2">牛奶</td>
+        <td class="box"><input type="text"value="20" id="milk">瓶</td>
+        </tr>
+        <tr>
+          <td colspan="2">檸檬汁</td>
+          <td class="box"><input type="text"value="20" id="lemon">瓶</td>
+        </tr>
+        <tr>
+          <td colspan="2">奶精球 </td>
+          <td class="box"><input type="text"value="20" id="fakeMilk">袋</td>
+        </tr> 
+        <tr>
+          <td colspan="2">可可粉</td>
+          <td class="box"><input type="text"value="20" id="coco">包</td>
+        </tr>
+        <tr>
+          <td colspan="2">燕麥奶</td>
+          <td class="box"><input type="text"value="20"id="oatsMilk">瓶</td>
+        </tr>
+        <tr>
+          <th colspan="3">用品</th>
+        </tr>
+        <tr>
+          <td colspan="2">小紙杯</td>
+          <td class="box"><input type="text"value="20" id="smallCup">袋</td>
+        </tr>
+        <tr>
+          <td colspan="2">大紙杯</td>
+          <td class="box"><input type="text"value="20" id="bigCup">袋</td>
+        </tr>
+        <tr>
+          <td colspan="2">小杯蓋</td>
+          <td class="box"><input type="text"value="20"id="smallGai">袋</td>
+        </tr>
+        <tr>
+          <td colspan="2">大杯蓋</td>
+          <td class="box"><input type="text"value="20" id="bigGai">袋</td>
+        </tr>
+        
+    </table>
+<script>
+  var egg_0 =0;
+  var egg_1 =0;
+  var egg_2 =0;
+  var egg_3 =0;
+  var egg_4 =0;
+  var egg_5 =0;
+  var egg_6 =0;
+  var egg_7 =0;
+  var egg_8 =0;
+  var egg_9 =0;
+  var egg_10 =0;
+  var egg_11 =0;
+  var egg_12 =0;
+  var egg_13 =0;
+  var egg_14 =0;
+  var egg_15 =0;
+  var egg_16 =0;
+  var egg_17=0;
+  var egg_18 =0;
+  var egg_19=0;
+  var egg_20 =0;
+  var egg_21 =0;
+var apple=localStorage.getItem("cat");
+
+var cc=JSON.parse(apple);
+console.log(cc);
+var bb= cc.length;
+console.log(bb);
+// +cc[((bb%22)+22)]
+
+for( var i=0; i<cc.length/22;i++){
+egg_0 +=parseInt( cc[(bb%22)+(i*22)].apple);
+console.log(typeof egg_0);
+egg_1 +=parseInt( cc[((bb%22)+1)+(i*22)].banana);
+egg_2 +=parseInt( cc[((bb%22)+2)+(i*22)].cat);
+egg_3 +=parseInt( cc[((bb%22)+3)+(i*22)].dog);
+egg_4 +=parseInt( cc[((bb%22)+4)+(i*22)].ear);
+egg_5 +=parseInt( cc[((bb%22)+5)+(i*22)].fog);
+egg_6 +=parseInt( cc[((bb%22)+6)+(i*22)].girl);
+egg_7 +=parseInt( cc[((bb%22)+7)+(i*22)].happy);
+egg_8 +=parseInt( cc[((bb%22)+8)+(i*22)].ice);
+egg_9 +=parseInt( cc[((bb%22)+9)+(i*22)].joy);
+egg_10 +=parseInt( cc[((bb%22)+10)+(i*22)].kitty);
+egg_11 +=parseInt( cc[((bb%22)+11)+(i*22)].long);
+egg_12 +=parseInt( cc[((bb%22)+12)+(i*22)].man);
+egg_13 +=parseInt( cc[((bb%22)+13)+(i*22)].nose);
+egg_14 +=parseInt( cc[((bb%22)+14)+(i*22)].ox);
+egg_15 +=parseInt( cc[((bb%22)+15)+(i*22)].people);
+egg_16 +=parseInt( cc[((bb%22)+16)+(i*22)].queen);
+egg_17 +=parseInt( cc[((bb%22)+17)+(i*22)].rose);
+egg_18 +=parseInt( cc[((bb%22)+18)+(i*22)].sexy);
+egg_19 +=parseInt( cc[((bb%22)+19)+(i*22)].tv);
+egg_20 +=parseInt( cc[((bb%22)+20)+(i*22)].unber);
+egg_21 +=parseInt( cc[((bb%22)+21)+(i*22)].victory);
+}
+
+console.log(egg_0);
+console.log(egg_1);
+console.log(egg_2);
+console.log(egg_3);
+console.log(egg_4);
+console.log(egg_5);
+console.log(egg_6);
+console.log(egg_7);
+console.log(egg_8);
+console.log(egg_9);
+console.log(egg_10);
+console.log(egg_11);
+console.log(egg_12);
+console.log(egg_13);
+console.log(egg_14);
+console.log(egg_15);
+console.log(egg_16);
+console.log(egg_17);
+console.log(egg_18);
+console.log(egg_19);
+console.log(egg_20);
+console.log(egg_21);
+var remain_1=(parseFloat(coffeBean_1.value)*50-egg_0-egg_2-egg_4-egg_6-egg_10-egg_12)/50;
+var remain_1_2=(parseFloat(remain_1)*25-egg_1-egg_3-egg_5-egg_7-egg_11-egg_13)/25;
+coffeBean_1.value=remain_1_2;
+if(coffeBean_1.value<=7){
+  coffeBean_1.style.color="red"}
+  else if(coffeBean_1.value<=15){
+    coffeBean_1.style.color="orange"
+  };
+var remain_2_1=(parseFloat(coffeBean_2.value)*50-egg_20)/50;
+var remain_2_2=(parseFloat(remain_2_1)*25-egg_21)/25;
+coffeBean_2.value=remain_2_2;
+if(coffeBean_2.value<=7){
+  coffeBean_2.style.color="red"}
+  else if(coffeBean_2.value<=15){
+    coffeBean_2.style.color="orange"
+  };
+var remain_3_1=(parseFloat(coffeBean_3.value)*50-egg_14)/50;
+var remain_3_2=(parseFloat(remain_3_1)*25-egg_15)/25;
+coffeBean_3.value=remain_3_2;
+if(coffeBean_3.value<=7){
+  coffeBean_3.style.color="red"}
+  else if(coffeBean_3.value<=15){
+    coffeBean_3.style.color="orange"
+  };
+var remain_4_1=(parseFloat(coffeBean_4.value)*50-egg_18)/50;
+var remain_4_2=(parseFloat(remain_4_1)*25-egg_19)/25;
+coffeBean_4.value=remain_4_2;
+if(coffeBean_4.value<=7){
+  coffeBean_4.style.color="red"}
+  else if(coffeBean_4.value<=15){
+    coffeBean_4.style.color="orange"
+  };
+var remain_5_1=(parseFloat(coffeBean_5.value)*50-egg_16)/50;
+var remain_5_2=(parseFloat(remain_5_1)*25-egg_17)/25;
+coffeBean_5.value=remain_5_2;
+if(coffeBean_5.value<=7){
+  coffeBean_5.style.color="red"}
+  else if(coffeBean_5.value<=15){
+    coffeBean_5.style.color="orange"
+  };
+ 
+var remain_6_1=(parseFloat(milk.value)*50-egg_4-egg_6)/50;
+var remain_6_2=(parseFloat(remain_6_1)*25-egg_5-egg_7)/25;
+milk.value=remain_6_2;
+if(milk.value<=7){
+  milk.style.color="red"}
+  else if(milk.value<=15) {
+    milk.style.color="orange"
+};
+var remain_7_1=(parseFloat(lemon.value)*50-egg_10)/50;
+var remain_7_2=(parseFloat(remain_7_1)*25-egg_11)/25;
+lemon.value=remain_7_2;
+if(lemon.value<=7){
+  lemon.style.color="red"}
+  else if(lemon.value<=15) {
+    lemon.style.color="orange"
+};
+
+var remain_8_1=(parseFloat(fakeMilk.value)*50-egg_2)/50;
+var remain_8_2=(parseFloat(remain_8_1)*25-egg_3)/25;
+fakeMilk.value=remain_8_2;
+if(fakeMilk.value<=7){
+  fakeMilk.style.color="red"}
+  else if(fakeMilk.value<=15) {
+    fakeMilk.style.color="orange"
+};
+var remain_9_1=(parseFloat(coco.value)*50-egg_8)/50;
+var remain_9_2=(parseFloat(remain_9_1)*25-egg_9)/25;
+coco.value=remain_9_2;
+if(coco.value<=7){
+  coco.style.color="red"}
+  else if(coco.value<=15){
+    coco.style.color="orange"
+  };
+ var remain_10_1=(parseFloat(oatsMilk.value)*50-egg_12)/50;
+var remain_10_2=(parseFloat(remain_10_1)*25-egg_13)/25;
+oatsMilk.value=remain_10_2;
+if(oatsMilk.value<=7){
+  oatsMilk.style.color="red"}
+  else if(oatsMilk.value<=15){
+    oatsMilk.style.color="orange"
+  };
+var remain_11_1=(parseFloat(smallCup.value)*50-egg_0-egg_2-egg_4-egg_6-egg_8-egg_10-egg_12-egg_14-egg_16-egg_18-egg_20)/50;
+smallCup.value=remain_11_1;
+if(smallCup.value<=7){
+  smallCup.style.color="red"}
+  else if(smallCup.value<=15){
+    smallCup.style.color="orange"
+  };
+var remain_12_1=(parseFloat(bigCup.value)*25-egg_1-egg_3-egg_5-egg_7-egg_9-egg_11-egg_13-egg_15-egg_17-egg_19-egg_21)/25;
+
+bigCup.value=remain_12_1;
+if(bigCup.value<=7){
+  bigCup.style.color="red"}
+  else if(bigCup.value<=15){
+    bigCup.style.color="orange"
+  };
+  var remain_13_1=(parseFloat(smallGai.value)*50-egg_0-egg_2-egg_4-egg_6-egg_8-egg_10-egg_12-egg_14-egg_16-egg_18-egg_20)/50;
+  smallGai.value=remain_13_1;
+if(smallGai.value<=7){
+    smallGai.style.color="red"}
+  else if(smallGai.value<=15){
+    smallGai.style.color="orange"
+  };
+var remain_14_1=(parseFloat(bigGai.value)*25-egg_1-egg_3-egg_5-egg_7-egg_9-egg_11-egg_13-egg_15-egg_17-egg_19-egg_21)/25;
+
+bigGai.value=remain_14_1;
+if(bigGai.value<=7){
+    bigGai.style.color="red"}
+  else if(bigGai.value<=15){
+    bigGai.style.color="orange"
+  };
+
+
+
+
+
+</script>
+
+  </body>
+
+</html>

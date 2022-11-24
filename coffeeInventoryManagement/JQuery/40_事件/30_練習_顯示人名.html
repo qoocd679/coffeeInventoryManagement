@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../_js/jquery-3.6.0.js"></script>
+    <!-- 10. 參考結果設定對應 css -->
+    <style>
+        div{
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 20. 設定袋子，裡面裝一張圖片和一段文字 -->
+<div id="a1">
+    <img src="../hi/op_01.jpg" >
+    <p id="1"></p>
+</div>
+<div id="a2">
+    <img src="../hi/op_02.jpg">
+    <p id="2"></p>
+</div >
+<div id="a3">
+    <img src="../hi/op_03.jpg">
+    <p id="3"></p>
+</div>
+    <script>
+        $(function () {
+            // 30. 參考執行結果，條列所需的 樣式以及事件
+//隱藏 字 然後當滑鼠移到位置 顯示相對的名子
+        //     $('#a2').on('mousemove',function(){
+        //         $("#2").text("索隆");
+        //     })
+        //     $('#a1').on('mousemove',function(){
+        //         $("#1").text("魯夫");
+        //     })
+        //     $('#a3').on('mousemove',function(){
+        //         $("#3").text("娜美");
+        //     })
+        //     $('#a2').on('mouseleave',function(){
+        //         $("#2").text("");})
+        //     $('#a1').on('mouseleave',function(){
+        //     $("#1").text(""); }) 
+        //     $('#a3').on('mouseleave',function(){
+        //     $("#3").text(""); }) 
+        // });
+        <div>
+        <img src="../_image/op_01.jpg">
+        <p>魯夫</p>
+    </div>
+    <div>
+        <img src="../_image/op_02.jpg">
+        <p>索隆</p>
+    </div>
+    <div>
+        <img src="../_image/op_03.jpg">
+        <p>娜美</p>
+    </div>
+    <script>
+        $(function () {
+            // 30. 參考執行結果，條列所需的 樣式以及事件
+            $('p').css('visibility','hidden');
+            $('div').on({
+                'mousemove': function(){
+                    $(this)
+                    .find('p')
+                    .css('visibility','visible');
+                },
+                'mouseleave': function(){
+                    $(this)
+                    .find('p')
+                    .css('visibility','hidden');
+                }
+            })
+        });
+    })
+    </script>
+</body>
+
+</html>

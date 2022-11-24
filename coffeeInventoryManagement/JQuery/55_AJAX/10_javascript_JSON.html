@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h4>JSON - Introduction</h4>
+    <p><a href='https://www.w3schools.com/js/js_json_intro.asp'>https://www.w3schools.com/js/js_json_intro.asp</a></p>
+
+    <script>
+
+        // 10. 宣告一個陣列，陣列中每一個項目都是物件
+        var car = [
+            {
+                pname: "巧可力",
+                price: 20
+            }, {
+                name: "糖果",
+                price: 25
+
+            }
+        ]
+        // 20. JSON.stringify 將 物件 變成 文字
+       var box =JSON.stringify(car);
+       console.log(box);
+        // 30. JSON.parse     將 文字 變成 物件
+
+    </script>
+</body>
+
+</html>

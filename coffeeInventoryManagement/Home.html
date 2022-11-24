@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系統首頁</title>
+    <link rel="stylesheet" href="./backGround.css">
+    <style>
+      table,
+      td,
+      th {
+          background-color: #FFF5EE;
+          border: 1.5px solid salmon;
+          table-layout: fixed;
+          margin-left: auto;
+          margin-right: auto;
+          width: 500px;
+          height: 50px;
+      }
+
+      th {
+        color: rgb(35, 93, 216);
+            font-size: 40px;
+           
+      }
+
+      .money {
+          text-align: center
+      }
+
+      .moneybox {
+          text-align: right;
+      }
+     h1{
+      font-size: 50px;
+      margin-left: 41%;
+      color: red;
+     } 
+     td{
+      font-size: 25px;
+     }
+     input{
+      height: 25px;
+      width: 40px;
+     }
+     table{
+    cursor:pointer;
+     }
+     button{
+      width: 100px;
+      height: 40px;
+      font-size: larger;
+     }
+  </style>
+ <script src="./jquery-3.6.0.js"></script>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="./Home.html">首頁</a>
+        <div class="subnav">
+          <button class="subnavbtn">進貨管理 <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="./GoodNumbers.html">庫存管理</a>
+            <a href="./BuyGoods.html">下單系統</a>
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">銷貨管理 <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="./MakeMoney.html">當日營業額</a> 
+            <a href="./Top10.html">本日熱銷</a>    
+          </div>
+        </div>
+        <div class="subnav">
+          <button class="subnavbtn">服務廠商 <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="./Producer.html">聯絡資訊</a>
+        
+          </div>
+        </div>
+      </div>
+        <br><br><br><br>
+        <h1> 銷貨管理首頁</h1>
+        <table> <form ></form>  
+          <tr>
+              <th>品名</th>
+              <th>價錢</th>
+              <th>數量</th>
+          </tr>
+          <tr>
+              <td>美式咖啡</td>
+              <td class="money">50/70</td>
+              <td class="moneybox">
+                <input type="number" min="0" max="100" id="50_A" >杯
+                <input type="number" min="0" max="100" id="70_A">杯
+           
+              </td>
+          </tr>
+          <tr>
+              <td>特調咖啡</td>
+              <td class="money">55/75</td>
+              <td class="moneybox">
+                <input type="number" min="0" max="100" id="55_A">杯
+                <input type="number" min="0" max="100" id="75_A">杯
+              </td>
+          </tr>
+          <tr>
+              <td>拿鐵咖啡</td>
+              <td class="money">60/80</td>
+              <td class="moneybox"> 
+                <input type="number" min="0" max="100"  id="60_A">杯
+                <input type="number" min="0" max="100"  id="80_A">杯
+              </td>
+          </tr>
+          <tr>
+              <td>卡布奇諾</td>
+              <td class="money">60/80</td>
+              <td class="moneybox">
+                <input type="number" min="0" max="100"  id="60_A_1">杯
+                <input type="number" min="0" max="100"  id="80_A_1">杯
+              </td>
+          </tr>
+          <tr>
+              <td>可可亞</td>
+              <td class="money">60/80</td>
+              <td class="moneybox">
+                <input type="number" min="0" max="100"  id="60_C">杯
+                <input type="number" min="0" max="100"  id="80_C">杯
+              </td>
+          </tr>
+  
+          <tr>
+              <td>西西里咖啡</td>
+              <td class="money">65/85</td>
+              <td class="moneybox">
+                <input type="number" min="0" max="100"  id="65_A_2">杯
+                <input type="number" min="0" max="100" id="85_A_2">杯
+              </td>
+          </tr>
+          <tr>
+              <td>燕麥奶咖啡</td>
+              <td class="money">65/85</td>
+              <td class="moneybox"> 
+                <input type="number" min="0" max="100"  id="65_A_3">杯
+                <input type="number" min="0" max="100"  id="85_A_3">杯
+              </td>
+          </tr>
+          <tr>
+              <td>精品曼巴</td>
+              <td class="money">80/100</td>
+              <td class="moneybox">
+                <input type="number" min="0" max="100"  id="80_B">杯
+                <input type="number" min="0" max="100"  id="100_B">杯
+              </td>
+          </tr>
+          <tr>
+              <td>精品Kona</td>
+              <td class="money">80/100</td>
+              <td class="moneybox">
+                <input type="number" min="0" max="100"  id="80_K">杯
+                <input type="number" min="0" max="100"  id="100_K">杯
+              </td>
+          </tr>
+          <tr>
+              <td>精品西達摩</td>
+              <td class="money">90/110</td>
+              <td class="moneybox">
+                  <input type="number" min="0" max="100"  id="80_E">杯
+                  <input type="number" min="0" max="100" id="100_E">杯
+              </td>
+          </tr>
+          <tr>
+              <td>精品阿拉比卡</td>
+              <td class="money">100/120</td>
+              <td class="moneybox">
+                  <input type="number" min="0" max="100"  id="80_AR">杯
+                  <input type="number" min="0" max="100"  id="100_AR">杯
+              </td>
+          </tr>
+          <tr>
+              <td><button onclick="calaulate()">結帳</button></td>
+            
+          </tr>
+        </form>
+<script>
+
+var apple=localStorage.getItem("cat");
+
+var cc=JSON.parse(apple);
+console.log(cc);
+
+
+
+function calaulate(){ 
+ if(cc==null){ 
+ var box=[] 
+ const audio = document.createElement("audio");
+        audio.src = "./Cash.mp3";
+        audio.play();
+var cat_1 = $('#50_A').closest('input').val();
+var cat_2 = $('#70_A').closest('input').val();
+var cat_3 = $('#55_A').closest('input').val();
+var cat_4 = $('#75_A').closest('input').val();
+var cat_5 = $('#60_A').closest('input').val();
+var cat_6 = $('#80_A').closest('input').val();
+var cat_7 = $('#60_A_1').closest('input').val();
+var cat_8 = $('#80_A_1').closest('input').val();
+var cat_9 = $('#60_C').closest('input').val();
+var cat_10 = $('#80_C').closest('input').val();
+var cat_11 = $('#65_A_2').closest('input').val();
+var cat_12 = $('#85_A_2').closest('input').val();
+var cat_13 = $('#65_A_3').closest('input').val();
+var cat_14 = $('#85_A_3').closest('input').val();
+var cat_15 = $('#80_B').closest('input').val();
+var cat_16 = $('#100_B').closest('input').val();
+var cat_17 = $('#80_K').closest('input').val();
+var cat_18 = $('#100_K').closest('input').val();
+var cat_19 = $('#80_E').closest('input').val();
+var cat_20 = $('#100_E').closest('input').val();
+var cat_21 = $('#80_AR').closest('input').val();
+var cat_22 = $('#100_AR').closest('input').val();
+
+if(cat_1==""){
+  cat_1="0";
+}
+
+if(cat_2==""){
+  cat_2="0";
+}
+
+if(cat_3==""){
+  cat_3="0";
+}
+
+if(cat_4==""){
+  cat_4="0";
+}
+
+if(cat_5==""){
+  cat_5="0";
+}
+
+if(cat_6==""){
+  cat_6="0";
+}
+
+if(cat_7==""){
+  cat_7="0";
+}
+
+if(cat_8==""){
+  cat_8="0";
+}
+
+if(cat_9==""){
+  cat_9="0";
+}
+
+if(cat_10==""){
+  cat_10="0";
+}
+
+if(cat_11==""){
+  cat_11="0";
+}
+
+if(cat_12==""){
+  cat_12="0";
+}
+
+if(cat_13==""){
+  cat_13="0";
+}
+
+if(cat_14==""){
+  cat_14="0";
+}
+
+if(cat_15==""){
+  cat_15="0";
+}
+
+if(cat_16==""){
+  cat_16="0";
+}
+
+if(cat_17==""){
+  cat_17="0";
+}
+
+if(cat_18==""){
+  cat_18="0";
+}
+
+if(cat_19==""){
+  cat_19="0";
+}
+
+if(cat_20==""){
+  cat_20="0";
+}
+
+if(cat_21==""){
+  cat_21="0";
+}
+
+if(cat_22==""){
+  cat_22="0";
+}
+
+
+// var box =[{"50_A":cat_1},{'#70_A':cat_2},{"55_A":cat_3},{"75_A":cat_4},{"60_A":cat_5},{"80_A":cat_6},{"60_A_1":cat_7},{"80_A_1":cat_8},{"60_C":cat_9},{"#80_C":cat_10},{"65_A_2":cat_11},{"85_A_2":cat_12}
+// ,{"65_A_3":cat_13},{"#85_A_3":cat_14},{"80_B":cat_15},{"100_B":cat_16},{"80_K":cat_17},{"100_K":cat_18},{"80_E":cat_19},{"100_E":cat_20},{"80_AR":cat_21},{"100_AR":cat_22
+// }];
+
+
+console.log(box);
+
+box.push({"apple":cat_1},{'banana':cat_2},{"cat":cat_3},{"dog":cat_4},{"ear":cat_5},{"fog":cat_6},{"girl":cat_7},{"happy":cat_8},{"ice":cat_9},{"joy":cat_10},{"kitty":cat_11},{"long":cat_12}
+,{"man":cat_13},{"nose":cat_14},{"ox":cat_15},{"people":cat_16},
+{"queen":cat_17},{"rose":cat_18},{"sexy":cat_19},{"tv":cat_20},{"unber":cat_21},{"victory":cat_22});
+
+var boy=JSON.stringify(box);
+
+localStorage.setItem("cat",`${boy}`);
+
+
+
+}else{
+  var box=cc;
+  const audio = document.createElement("audio");
+        audio.src = "./Cash.mp3";
+        audio.play();
+var cat_1 = $('#50_A').closest('input').val();
+var cat_2 = $('#70_A').closest('input').val();
+var cat_3 = $('#55_A').closest('input').val();
+var cat_4 = $('#75_A').closest('input').val();
+var cat_5 = $('#60_A').closest('input').val();
+var cat_6 = $('#80_A').closest('input').val();
+var cat_7 = $('#60_A_1').closest('input').val();
+var cat_8 = $('#80_A_1').closest('input').val();
+var cat_9 = $('#60_C').closest('input').val();
+var cat_10 = $('#80_C').closest('input').val();
+var cat_11 = $('#65_A_2').closest('input').val();
+var cat_12 = $('#85_A_2').closest('input').val();
+var cat_13 = $('#65_A_3').closest('input').val();
+var cat_14 = $('#85_A_3').closest('input').val();
+var cat_15 = $('#80_B').closest('input').val();
+var cat_16 = $('#100_B').closest('input').val();
+var cat_17 = $('#80_K').closest('input').val();
+var cat_18 = $('#100_K').closest('input').val();
+var cat_19 = $('#80_E').closest('input').val();
+var cat_20 = $('#100_E').closest('input').val();
+var cat_21 = $('#80_AR').closest('input').val();
+var cat_22 = $('#100_AR').closest('input').val();
+
+// var box =[{"50_A":cat_1},{'#70_A':cat_2},{"55_A":cat_3},{"75_A":cat_4},{"60_A":cat_5},{"80_A":cat_6},{"60_A_1":cat_7},{"80_A_1":cat_8},{"60_C":cat_9},{"#80_C":cat_10},{"65_A_2":cat_11},{"85_A_2":cat_12}
+// ,{"65_A_3":cat_13},{"#85_A_3":cat_14},{"80_B":cat_15},{"100_B":cat_16},{"80_K":cat_17},{"100_K":cat_18},{"80_E":cat_19},{"100_E":cat_20},{"80_AR":cat_21},{"100_AR":cat_22
+// }];
+if(cat_1==""){
+  cat_1="0";
+}
+
+if(cat_2==""){
+  cat_2="0";
+}
+
+if(cat_3==""){
+  cat_3="0";
+}
+
+if(cat_4==""){
+  cat_4="0";
+}
+
+if(cat_5==""){
+  cat_5="0";
+}
+
+if(cat_6==""){
+  cat_6="0";
+}
+
+if(cat_7==""){
+  cat_7="0";
+}
+
+if(cat_8==""){
+  cat_8="0";
+}
+
+if(cat_9==""){
+  cat_9="0";
+}
+
+if(cat_10==""){
+  cat_10="0";
+}
+
+if(cat_11==""){
+  cat_11="0";
+}
+
+if(cat_12==""){
+  cat_12="0";
+}
+
+if(cat_13==""){
+  cat_13="0";
+}
+
+if(cat_14==""){
+  cat_14="0";
+}
+
+if(cat_15==""){
+  cat_15="0";
+}
+
+if(cat_16==""){
+  cat_16="0";
+}
+
+if(cat_17==""){
+  cat_17="0";
+}
+
+if(cat_18==""){
+  cat_18="0";
+}
+
+if(cat_19==""){
+  cat_19="0";
+}
+
+if(cat_20==""){
+  cat_20="0";
+}
+
+if(cat_21==""){
+  cat_21="0";
+}
+
+if(cat_22==""){
+  cat_22="0";
+}
+
+
+console.log(box);
+box.push({"apple":cat_1},{'banana':cat_2},{"cat":cat_3},{"dog":cat_4},{"ear":cat_5},
+{"fog":cat_6},{"girl":cat_7},{"happy":cat_8},{"ice":cat_9},{"joy":cat_10},{"kitty":cat_11},{"long":cat_12}
+,{"man":cat_13},{"nose":cat_14},{"ox":cat_15},{"people":cat_16},{"queen":cat_17},{"rose":cat_18},{"sexy":cat_19},
+{"tv":cat_20},{"unber":cat_21},{"victory":cat_22});
+
+var boy=JSON.stringify(box);
+
+localStorage.setItem("cat",`${boy}`);
+
+}}
+//localStorage.removeItem("cat");
+// console.log(dog);
+
+
+      </script>
+      </table>
+</body>
+</html>
